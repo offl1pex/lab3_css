@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб 3. Задание 2* — Вертикальное меню с двойной вложенностью</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .menu {
+            width: 260px;
+            background: #1a252f;
+            border-radius: 5px;
+        }
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-bottom: 1px solid #2c3e50;
+        }
+        .menu a:hover {
+            background: #3498db;
+        }
+        .has-submenu {
+            position: relative;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 240px;
+            background: #2c3e50;
+            z-index: 100;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+        .has-submenu:hover > .submenu {
+            display: block;
+        }
+        .submenu .has-submenu:hover > .submenu {
+            display: block;
+        }
+        .submenu a:hover {
+            background: #2980b9;
+        }
+        .submenu-level2 {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Вертикальное меню с двойной вложенностью</h1>
+    <div class="menu">
+        <a href="#">Главная</a>
+        <div class="has-submenu">
+            <a href="#">Каталог ▸</a>
+            <div class="submenu">
+                <a href="#">Все товары</a>
+                <div class="has-submenu">
+                    <a href="#">Книги ▸</a>
+                    <div class="submenu submenu-level2">
+                        <a href="#">Художественная</a>
+                        <a href="#">Научная</a>
+                        <a href="#">Детская</a>
+                    </div>
+                </div>
+                <div class="has-submenu">
+                    <a href="#">Канцелярия ▸</a>
+                    <div class="submenu submenu-level2">
+                        <a href="#">Ручки</a>
+                        <a href="#">Тетради</a>
+                        <a href="#">Папки</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="has-submenu">
+            <a href="#">О компании ▸</a>
+            <div class="submenu">
+                <a href="#">История</a>
+                <a href="#">Команда</a>
+                <a href="#">Вакансии</a>
+            </div>
+        </div>
+        <a href="#">Контакты</a>
+    </div>
+    <p style="margin-top:20px;">Наведите на пункты с ▸ — откроются подменю, в том числе второго уровня.</p>
+<p style="text-align:center; margin-top:30px;"><a href="index.html" style="color:#3498db; font-size:16px;">← Назад к списку заданий</a></p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб 3. Задание 3 — Вертикальное меню</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(to bottom, #2c3e50, #34495e);
+            border-radius: 8px;
+            padding: 10px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 16px 25px;
+            font-size: 18px;
+            border-left: 4px solid transparent;
+            transition: all 0.3s;
+        }
+        .sidebar a:hover {
+            background: rgba(52, 152, 219, 0.3);
+            border-left-color: #3498db;
+            padding-left: 35px;
+        }
+        .sidebar a.active {
+            background: #3498db;
+            border-left-color: #2980b9;
+        }
+        .section-title {
+            color: #bdc3c7;
+            padding: 10px 25px 5px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Вертикальное меню (задание 3)</h1>
+    <div class="sidebar">
+        <div class="section-title">Навигация</div>
+        <a href="#" class="active">Главная</a>
+        <a href="#">Новости</a>
+        <a href="#">Статьи</a>
+        <div class="section-title">Магазин</div>
+        <a href="#">Каталог книг</a>
+        <a href="#">Акции</a>
+        <a href="#">Корзина</a>
+        <div class="section-title">Информация</div>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+        <a href="#">Помощь</a>
+    </div>
+    <p style="margin-top:20px;">Простое вертикальное меню с эффектом при наведении (сдвиг и подсветка). Без flex/grid.</p>
+<p style="text-align:center; margin-top:30px;"><a href="index.html" style="color:#3498db; font-size:16px;">← Назад к списку заданий</a></p>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб 3. Задание 1 — Трёхколоночный макет</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ecf0f1;
+        }
+        .header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            background: linear-gradient(to bottom, #e1e1e1, #d0d0d0);
+            overflow: hidden;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+        .nav a {
+            float: left;
+            display: block;
+            color: #2c3e50;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .nav a:hover {
+            background: #bdc3c7;
+        }
+        .container {
+            margin: 20px;
+        }
+        /* Важно: в HTML сначала left, right, потом center */
+        .left {
+            float: left;
+            width: 220px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        .right {
+            float: right;
+            width: 220px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        .center {
+            overflow: hidden; /* обязательное свойство */
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 0 240px;
+            min-height: 400px;
+        }
+        .block {
+            position: relative;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(52, 152, 219, 0.95);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            display: none;
+            width: 250px;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .block:hover .popup {
+            display: block;
+        }
+        h2, h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Трёхколоночный макет сайта</div>
+    <div class="nav">
+        <a href="#">Главная</a>
+        <a href="#">Новости</a>
+        <a href="#">Статьи</a>
+        <a href="#">Галерея</a>
+        <a href="#">Контакты</a>
+    </div>
+    <div class="container">
+        <!-- Порядок в HTML: left, right, center -->
+        <div class="left">
+            <h3>Левая колонка</h3>
+            <p>Навигация или меню категорий.</p>
+            <ul>
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+                <li>Пункт 3</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h3>Правая колонка</h3>
+            <p>Реклама или дополнительная информация.</p>
+            <p>Погода, новости дня и т.д.</p>
+        </div>
+        <div class="center">
+            <h2>Центральная колонка</h2>
+            <div class="block">
+                <h3>Статья 1: CSS Float</h3>
+                <p>Свойство float позволяет создавать обтекаемые блоки и многоколоночные макеты.</p>
+                <div class="popup">Это всплывающее пояснение при наведении на блок. Здесь можно разместить дополнительную информацию.</div>
+            </div>
+            <div class="block">
+                <h3>Статья 2: Позиционирование</h3>
+                <p>Absolute и relative позиционирование используются для наплывающих элементов и dropdown-меню.</p>
+                <div class="popup">Пояснение ко второй статье. Макет построен без flex и grid, только float + overflow:hidden.</div>
+            </div>
+            <div class="block">
+                <h3>Статья 3: Меню</h3>
+                <p>Горизонтальное и вертикальное меню с выпадающими пунктами.</p>
+                <div class="popup">Ещё одно всплывающее окно. Работает в Chromium-браузерах.</div>
+            </div>
+        </div>
+    </div>
+<p style="text-align:center; margin-top:30px;"><a href="index.html" style="color:#3498db; font-size:16px;">← Назад к списку заданий</a></p>
+</body>
+</html>
